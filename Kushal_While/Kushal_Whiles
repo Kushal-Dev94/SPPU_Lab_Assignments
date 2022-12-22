@@ -1,0 +1,232 @@
+"""
+Name: Kushal Kishor Shankhapal
+Roll no: 57
+Branch: IT-3
+Date: 19/12/2022
+Question 1: Write a program to print the text “Hello, World!” 5 times.
+"""
+
+i = 0
+while i < 5:
+    print("Hello, World!")
+    i += 1"""
+Question 1: Write a program to print the text “Hello, World!” 5 times.
+"""
+
+i = 0
+while i < 5:
+    print("Hello, World!")
+    i += 1
+
+"""
+Output: 
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+"""
+
+"""
+Output: 
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+Hello, World!
+"""
+
+"""
+Question 2: Write a program to print numbers between 1 and 10
+"""
+
+i = 0
+while i < 10:
+    print(i+1)
+    i += 1
+
+"""
+Output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+"""
+
+"""
+Question 3: Write a program to print even numbers between 1 and 10 in reverse order.
+"""
+
+i = 10
+while i > 0:
+    print(i)
+    i -= 2
+
+"""
+Output: 
+10
+8
+6
+4
+2
+"""
+
+"""
+Question 4: Write a program to print even numbers between 1 and 10
+"""
+
+i = 2
+while i < 11:
+    print(i)
+    i += 2
+
+"""
+Output: 
+2
+4
+6
+8
+10
+"""
+
+"""
+Question  5: Write a program to print odd numbers between 11 and 30
+"""
+
+i = 11
+while i < 30:
+    print(i)
+    i += 2
+
+"""
+Output: 
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+"""
+
+"""
+Question 6:
+Write a program to print following output
+Hi
+Hi
+Hi
+This is while loop
+"""
+
+i = 0
+while i < 3:
+    print("Hi")
+    i += 1
+
+"""
+Output:
+Hi
+Hi
+Hi
+"""
+
+"""
+Question 7:
+Write a program to print following output
+Hi
+This is while loop
+Hi
+This is while loop
+Hi
+This is while loop
+"""
+
+i = 0
+while i < 3:
+    print("Hi")
+    print("This is a while loop")
+    i += 1
+
+"""
+Output: 
+Hi
+This is a while loop
+Hi
+This is a while loop
+Hi
+This is a while loop
+"""
+
+"""
+Question 8: Write a program to print table of a given no.
+"""
+
+n = int(input("Enter a number: "))
+i = 1
+while i <= 10:
+    print(n * i)
+    i += 1
+
+"""
+Output: 
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+"""
+
+
+"""
+Question 9: Write a program to print sum of n natural nos.
+"""
+
+n = int(input("Enter a number: "))
+sum = 0
+i = 0
+while i <= n:
+    sum += i
+    i += 1
+print("Sum of first " + str(n) + " natural nos is : " + str(sum))
+
+"""
+Output: 
+Enter a number: 5
+Sum of first 5 natural nos is : 15
+"""
+
+"""
+Question 10: Write a program to print your name infinite times.
+"""
+
+i = 0
+while i < 1:
+    print("Kushal")
+
+"""
+Output:
+Kushal
+Kushal
+Kushal
+Kushal
+Kushal
+Kushal
+Kushal
+Kushal
+Kushal
+Kushal
+"""

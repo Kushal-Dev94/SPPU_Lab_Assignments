@@ -1,0 +1,24 @@
+"""
+Question 7:
+Write a program to print following output
+Hi
+This is for loop
+Hi
+This is for loop
+Hi
+This is for loop
+"""
+
+for i in range(3):
+    print("Hi")
+    print("This is for loop")
+
+"""
+Output:
+Hi
+This is for loop
+Hi
+This is for loop
+Hi
+This is for loop
+"""
