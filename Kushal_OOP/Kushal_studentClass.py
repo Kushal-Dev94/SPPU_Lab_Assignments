@@ -9,21 +9,22 @@ Student Class
 """
 
 class student:
-    def __init__(self, name, marks):
+    def __init__(self, name, rollNo, marks):
         self.name = name
         self.marks = marks
+        self.rollNo = rollNo
     
     def msg(self):
-        print(self.name, "got", self.marks, "marks")
+        print(self.name, "with roll no.", self.rollNo, "got", self.marks, "marks")
 
-s1 = student("Abcd", 30)
-s2 = student("Pqrs", 25)
+s1 = student("Abcd", 12, 30)
+s2 = student("Pqrs", 10, 25)
 s1.msg()
 s2.msg()
 
 """
 Output:
 
-Abcd got 30 marks
-Pqrs got 25 marks
+Abcd with roll no. 12 got 30 marks
+Pqrs with roll no. 10 got 25 marks
 """
