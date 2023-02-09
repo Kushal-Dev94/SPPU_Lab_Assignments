@@ -5,7 +5,7 @@ Branch: IT-3
 Date: 19/01/2023
 Assingnment no: 5 (Written)
 Assingnment Name: 
-Program forperforming various String Operations.
+Program for performing various String Operations.
 """
 
 s = input("Enter a string: ")
