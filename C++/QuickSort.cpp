@@ -1,3 +1,10 @@
+/*
+    Name: Kushal Kishor Shankhapal
+    Roll no: 56
+    Date: 09/09/23
+    Code: QuickSort
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -91,3 +98,47 @@ int main() {
 
     return 0;
 }
+
+/*
+Output: 
+
+1.Insert Records: 
+2.First 10 toppers of the class: 
+Enter your choice: 1
+Enter details: 
+
+Student 1 Records: 
+Roll no: 1
+Name: Kushal
+SGPA: 10
+Do you want to input more records? (Enter 1 if yes)
+1
+
+Student 2 Records: 
+Roll no: 5
+Name: Rohan
+SGPA: 9
+Do you want to input more records? (Enter 1 if yes)
+1
+
+Student 3 Records: 
+Roll no: 69
+Name: Rishikesh                                    
+SGPA: 8
+Do you want to input more records? (Enter 1 if yes)
+1
+
+Student 4 Records: 
+Roll no: 7
+Name: Om
+SGPA: 7
+Do you want to input more records? (Enter 1 if yes)
+2
+First 10 toppers: 
+1. Roll no: 1, Name: Kushal, SGPA: 10
+
+2. Roll no: 5, Name: Rohan, SGPA: 9
+
+3. Roll no: 69, Name: Rishikesh, SGPA: 8
+
+4. Roll no: 7, Name: Om, SGPA: 7*/
