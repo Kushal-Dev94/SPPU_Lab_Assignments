@@ -14,7 +14,7 @@ class Polymorphism {
 	}
 }
 
-class GFG {
+class CFG {
 	public static void main(String[] args)
 	{
 		System.out.println(Polymorphism.Multiply(2, 4));

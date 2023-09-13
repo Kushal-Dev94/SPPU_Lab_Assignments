@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-class ArithematicOperations {
+class ArithmeticOperations {
   public static void main(String[] args) {
 
 
-    Double number1, number2, result;
+    double number1, number2, result;
 
     Scanner input = new Scanner(System.in);
 
