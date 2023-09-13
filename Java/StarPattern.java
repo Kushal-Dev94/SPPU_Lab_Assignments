@@ -5,6 +5,7 @@ public class StarPattern {
         Scanner input = new Scanner(System.in);
         System.out.print("\tInput the no of lines for your star pattern: ");
         n = input.nextInt();
+        input.close();
 
         for (int i = 0; i <= n; i++) {
             System.out.println("\n");

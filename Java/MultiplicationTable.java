@@ -7,6 +7,7 @@ public class MultiplicationTable {
         Scanner input = new Scanner(System.in);
         System.out.print("Which number's multiplication table you want?: ");
         num = input.nextInt();
+        input.close();
         for (int i = 1; i <= 10; i++) {
             System.out.println(num + " * " + i + " = " + num * i);
         }

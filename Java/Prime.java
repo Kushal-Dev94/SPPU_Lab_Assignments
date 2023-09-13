@@ -3,21 +3,24 @@ public class Prime {
 
     public static void main(String[] args) {
 
-        int num = 0;
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a number: ");
-        num = input.nextInt();
+        int num = input.nextInt();
+		input.close();
+		int flag = 0;
+
         for (int i = 2; i < num; i++) {
- 		if (num % i == 0) {
- 			System.out.println(num + " is prime");
- 			break;
- 		}
- 		else
- 		{
- 			System.out.println(num + " is not prime");
- 			break;
- 		}
+			if (num % i == 0) {
+				System.out.println(num + " is prime");
+				flag = 1;
+				break;
+			}
+		}
+
+		if (flag == 0) {
+			System.out.println(num + " is not prime");
+		}
+
 	}
-	}
-	}
+}
 

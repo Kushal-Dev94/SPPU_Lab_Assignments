@@ -70,7 +70,9 @@ int main() {
     cout << "\n2.First 10 toppers of the class: \n";
     cout << "Enter your choice: ";
     cin >> n;
-    if (n == 1) {
+    switch (n)
+    {
+    case 1: {
         cout << "Enter details: \n";
         do {
             cout << "\nStudent " << i + 1 << " Records: \n";
@@ -87,18 +89,20 @@ int main() {
         } while (ch == 1);
     }
 
-    cout << "First 10 toppers: \n";
-    quickSort(s, 0, i - 1);
-    show2(s, i);
-    
-    // Free allocated memory
-    for (int j = 0; j < i; j++) {
-        delete s[j];
+    case 2: {
+        cout << "First 10 toppers: \n";
+        quickSort(s, 0, i - 1);
+        show2(s, i);
+        
+        // Free allocated memory
+        for (int j = 0; j < i; j++) {
+            delete s[j];
+        }
+
+        return 0;
+        }
     }
-
-    return 0;
 }
-
 /*
 Output: 
 

@@ -17,6 +17,7 @@ public class ComplexOperations {
 
         System.out.print("\tChoose an operator: +, -, *, or /: ");
         operator = input.next().charAt(0);
+        input.close();
 
         switch (operator) {
 

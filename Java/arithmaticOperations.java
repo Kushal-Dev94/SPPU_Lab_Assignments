@@ -9,7 +9,7 @@ class Main {
     Scanner input = new Scanner(System.in);
 
     System.out.println("Choose an operator: +, -, *, or /: ");
-    operator = input.next().charAt(0);
+    char operator = input.next().charAt(0);
 
     System.out.println("Enter first number");
     number1 = input.nextDouble();
