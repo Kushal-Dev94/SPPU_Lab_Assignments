@@ -1,25 +1,29 @@
 /*
     Name: Kushal Kishor Shankhapal
     Roll No: 56
-    Assignment No: 1
+    Assignment No: 4
+
+    Problem Statement: 
+        Design a base class shape with two double type values and member functions to input the data
+        and compute_area() for calculating area of shape. Derive two classes: triangle and rectangle. Make
+        compute_area() as abstract function and redefine this function in the derived class to suit their
+        requirements. Write a program that accepts dimensions of triangle/rectangle and display
+        calculated area. Implement dynamic binding for given case study.
  */
 
 abstract class Shape {
     double a, b;
-    public void Compute_Area(){
-
-    }
+    abstract void Compute_Area();
 }
 
 class Triangle extends Shape {
     Triangle(double base, double height) {
         this.a = base;
         this.b = height;
-        Compute_Area(a, b);
     }
 
-    void Compute_Area(double base, double height) {
-        System.out.println("Area of the Triangle is: " + (0.5 * base * height));
+    void Compute_Area() {
+        System.out.println("Area of the Triangle is: " + (0.5 * a * b));
     }
 }
 
@@ -27,12 +31,12 @@ class Rectangle extends Shape {
     Rectangle(double length, double breadth) {
         this.a = length;
         this.b = breadth;
-        Compute_Area(a, b);
     }
 
-    void Compute_Area(double length, double breadth) {
-        System.out.println("Area of the Rectangle is: " + (length * breadth));
+    void Compute_Area() {
+        System.out.println("Area of the Rectangle is: " + (a * b));
     }
+
 }
 
 public class Abstract {
@@ -48,4 +52,4 @@ public class Abstract {
     Output:
     Area of the Triangle is: 25.0
     Area of the Rectangle is: 50.0 
- */
+*/

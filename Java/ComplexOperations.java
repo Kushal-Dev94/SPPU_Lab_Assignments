@@ -2,6 +2,11 @@
     Name: Kushal Kishor Shankhapal
     Roll No: 56
     Assignment No: 1
+
+    Problem Statement: 
+        Design a class ‘Complex ‘with data members for real and imaginary part. Provide default and
+        Parameterized constructors. Write a program to perform arithmetic operations of two complex
+        numbers.
 */
 
 import java.util.Scanner;
@@ -77,6 +82,7 @@ public class ComplexOperations {
 	The addition of the two complex numbers is:
 	(4 + 2i) + (2 + 1i) = (6 + 3i)
 
+
     Output 2: (Subtraction)
 
     Input your first complex no: a + bi
@@ -88,6 +94,7 @@ public class ComplexOperations {
 	Choose an operator: +, -, *, or /: -
 	The subtraction of the two complex numbers is:
 	(4 + 2i) - (2 + 1i) = (2 + 1i)
+
 
 	Output 3: (Multiplication)
 
@@ -101,6 +108,7 @@ public class ComplexOperations {
 	The multiplication of the two complex numbers is:
 	(4 + 2i) * (2 + 1i) = (6 + 8i)
 
+    
 	Output 4: (Division)
 
 	Input your first complex no: a + bi

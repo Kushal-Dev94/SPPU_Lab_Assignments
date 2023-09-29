@@ -1,3 +1,16 @@
+/*
+    Name: Kushal Kishor Shankhapal
+    Roll No: 56
+    Assignment No: 2
+
+    Problem Statement: 
+        Identify commonalities and differences between Publication, Book and Magazine classes. Title,
+        Price, Copies are common instance variables and saleCopy is common method. The differences
+        are, Bookclass has author and orderCopies(). Magazine Class has methods orderQty, Current issue,
+        receiveissue().Write a program to find how many copies of the given books are ordered and
+        display total sale of publication.
+*/
+
 class Publication{
 private String title;
 public int qty;
@@ -34,7 +47,6 @@ public void sellcopy(int qty) {
 }
 
 class Book extends Publication {
-    private String author;
     public void ordercopies(int pcopies) {
         System.out.println("Total Book sell: $" + (qty * getcopies()));
     }
@@ -42,10 +54,8 @@ class Book extends Publication {
 
 class Magazine extends Publication {
     private int orderQty;
-    private String currentIssue;
     public void RecvNewIssue(String pNewIssue) {
         setcopies(orderQty);
-        currentIssue = pNewIssue;
     }
     public void sellcopy(int qty) {
         System.out.println("Total Magazine sell: $" + (qty * getprice()));
@@ -73,7 +83,11 @@ class PublicationPolymorphism{     //main class
 
 /*
 Output:
-
+Identify commonalities and differences between Publication, Book and Magazine classes. Title,
+Price, Copies are common instance variables and saleCopy is common method. The differences
+are, Bookclass has author and orderCopies(). Magazine Class has methods orderQty, Current issue,
+receiveissue().Write a program to find how many copies of the given books are ordered and
+display total sale of publication.
 Total Book sell: $0
 Total Publication sell: $30.0
 Total Publication sell: $40.6
