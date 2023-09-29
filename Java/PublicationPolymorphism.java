@@ -1,4 +1,4 @@
-public class Publication{
+class Publication{
 private String title;
 public int qty;
 private double price;
@@ -52,8 +52,8 @@ class Magazine extends Publication {
     }
 }
 
-class Polymorphism{     //main class
-    public static void main(String[] args) {
+class PublicationPolymorphism{     //main class
+    public static void main(java.lang.String[] args) {
         Book book1 = new Book();
         book1.ordercopies(3);
         Publication book2 = new Book();
