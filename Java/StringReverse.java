@@ -7,7 +7,6 @@ public class StringReverse {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a string: ");
         str.append(input.next());
-        input.close();
 	str = str.reverse();
         System.out.println("The reversed string is: " + str);
         }

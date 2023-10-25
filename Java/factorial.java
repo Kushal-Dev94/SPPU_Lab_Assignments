@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class factorial {
+public class Factorial {
 
     public static void main(String[] args) {
 
@@ -7,7 +7,6 @@ public class factorial {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a number: ");
         num = input.nextInt();
-        input.close();
         long factorial = 1;
         for(int i = 1; i <= num; ++i)
         {
