@@ -28,6 +28,10 @@ class GenericPrograms {
     static <N> void primeChecker(int n) {
         boolean isPrime = true;
 
+        if (n == 2) {
+            System.out.println("2 is neither prime nor composite.");
+        }
+
         for (int i = 2; i < n; i++) {
             if (n % i == 0) {
                 System.out.println(n + " is not Prime.");
@@ -46,11 +50,11 @@ class GenericPrograms {
         int selection;
         Scanner input = new Scanner(System.in);
         while (!isExit) {
-            System.out.println("1. Check if a number is Even or Odd.");
+            System.out.println("\n1. Check if a number is Even or Odd.");
             System.out.println("2. Check if a string is Palindrome or not.");
             System.out.println("3. Check if a number is Prime or not.");
             System.out.println("4. Exit.");
-            System.out.print("Enter your choice: ");
+            System.out.print("\nEnter your choice: ");
             selection = input.nextInt();
 
             switch (selection) {
@@ -71,9 +75,9 @@ class GenericPrograms {
 
                 case 4:
                     isExit = true;
+                    input.close();
                     break;
             }
-            input.close();
         }
     }
 }
