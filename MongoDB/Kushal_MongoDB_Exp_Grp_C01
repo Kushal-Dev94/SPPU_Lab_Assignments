@@ -1,0 +1,154 @@
+it@IT-LL-13:~$ mongosh
+Current Mongosh Log ID:	668e4e07d4a681b534149f47
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.10
+Using MongoDB:		7.0.12
+Using Mongosh:		2.2.10
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2024-07-10T13:08:34.305+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2024-07-10T13:08:40.740+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2024-07-10T13:08:40.741+05:30: vm.max_map_count is too low
+------
+
+test> show dbs
+Devloper    40.00 KiB
+Kushal_db   72.00 KiB
+admin       40.00 KiB
+config      84.00 KiB
+khiladi     40.00 KiB
+local       72.00 KiB
+rkb         72.00 KiB
+shubham    240.00 KiB
+test> use Kushal_db
+switched to db Kushal_db
+Kushal_db> db.dropDatabase()
+{ ok: 1, dropped: 'Kushal_db' }
+Kushal_db> show dbs
+Devloper   40.00 KiB
+admin      40.00 KiB
+config     84.00 KiB
+khiladi    40.00 KiB
+local      72.00 KiB
+rkb        72.00 KiB
+shubham   240.00 KiB
+Kushal_db> use Kushal_Game_Store_db
+switched to db Kushal_Game_Store_db
+Kushal_Game_Store_db> // Create a collection
+
+Kushal_Game_Store_db> db.createCollection("games")
+{ ok: 1 }
+Kushal_Game_Store_db> 
+
+Kushal_Game_Store_db> // Insert documents into the collection
+
+Kushal_Game_Store_db> db.games.insertMany([
+...   {
+...     _id: ObjectId('668e3eed22b60c85b6149f48'),
+...     Name: 'Counter Strike 2',
+...     Type: 'Multiplayer FPS Tactical Shooter',
+...     Platform: 'Steam',
+...     Rating: '8'
+...   },
+...   {
+...     _id: ObjectId('668e416022b60c85b6149f49'),
+...     Name: 'BeamNG.Drive',
+...     Type: 'Very realistic soft body vehicle simulator',
+...     Platform: 'Steam',
+...     Rating: '8'
+...   }
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('668e3eed22b60c85b6149f48'),
+    '1': ObjectId('668e416022b60c85b6149f49')
+  }
+}
+Kushal_Game_Store_db> // Find all documents in the collection
+
+Kushal_Game_Store_db> db.games.find()
+[
+  {
+    _id: ObjectId('668e3eed22b60c85b6149f48'),
+    Name: 'Counter Strike 2',
+    Type: 'Multiplayer FPS Tactical Shooter',
+    Platform: 'Steam',
+    Rating: '8'
+  },
+  {
+    _id: ObjectId('668e416022b60c85b6149f49'),
+    Name: 'BeamNG.Drive',
+    Type: 'Very realistic soft body vehicle simulator',
+    Platform: 'Steam',
+    Rating: '8'
+  }
+]
+Kushal_Game_Store_db> 
+
+Kushal_Game_Store_db> // Pretty-print the output
+
+Kushal_Game_Store_db> db.games.find().pretty()
+[
+  {
+    _id: ObjectId('668e3eed22b60c85b6149f48'),
+    Name: 'Counter Strike 2',
+    Type: 'Multiplayer FPS Tactical Shooter',
+    Platform: 'Steam',
+    Rating: '8'
+  },
+  {
+    _id: ObjectId('668e416022b60c85b6149f49'),
+    Name: 'BeamNG.Drive',
+    Type: 'Very realistic soft body vehicle simulator',
+    Platform: 'Steam',
+    Rating: '8'
+  }
+]
+Kushal_Game_Store_db> // Remove documents from the collection
+
+Kushal_Game_Store_db> db.games.remove({ Name: 'BeamNG.Drive' })
+DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+{ acknowledged: true, deletedCount: 1 }
+Kushal_Game_Store_db> db.games.find()
+[
+  {
+    _id: ObjectId('668e3eed22b60c85b6149f48'),
+    Name: 'Counter Strike 2',
+    Type: 'Multiplayer FPS Tactical Shooter',
+    Platform: 'Steam',
+    Rating: '8'
+  }
+]
+Kushal_Game_Store_db> // Update documents in the collection
+
+Kushal_Game_Store_db> db.games.update(
+...   { Name: 'Counter Strike 2' },
+...   { $set: { Rating: '9' } }
+... )
+DeprecationWarning: Collection.update() is deprecated. Use updateOne, updateMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Kushal_Game_Store_db> db.games.find()
+[
+  {
+    _id: ObjectId('668e3eed22b60c85b6149f48'),
+    Name: 'Counter Strike 2',
+    Type: 'Multiplayer FPS Tactical Shooter',
+    Platform: 'Steam',
+    Rating: '9'
+  }
+]
+Kushal_Game_Store_db> db.createCollection("temporary")
+{ ok: 1 }
+Kushal_Game_Store_db> db.temporary.drop()
+true
+Kushal_Game_Store_db> quit()
+
