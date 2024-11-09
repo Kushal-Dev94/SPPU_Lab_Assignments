@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
-class Main {
+class ArithmeticOperations {
   public static void main(String[] args) {
 
 
-    Double number1, number2, result;
+    double number1, number2, result;
 
     Scanner input = new Scanner(System.in);
 
     System.out.println("Choose an operator: +, -, *, or /: ");
-    operator = input.next().charAt(0);
+    char operator = input.next().charAt(0);
 
     System.out.println("Enter first number");
     number1 = input.nextDouble();
